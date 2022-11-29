@@ -7,6 +7,9 @@
 package ru.mirea.lab1;
 
 import java.util.*;
+
+import static ru.mirea.lab1.Task5.get_factorial;
+
 public class Task1 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -28,6 +31,8 @@ public class Task1 {
         media = suma/n;
 
         System.out.print(media);
+
+
 
     }
 

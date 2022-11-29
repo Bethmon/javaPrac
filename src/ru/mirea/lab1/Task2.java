@@ -11,7 +11,7 @@ public class Task2 {
 
     public static void main(String[] args){
         Scanner sc2 = new Scanner(System.in);
-        int n=0, suma=0, mayor=0, menor=0;
+        int n=0, suma=0, mayor=0, menor= Integer.MAX_VALUE;
 
         do {
             System.out.print("vector numbers: ");
@@ -25,7 +25,8 @@ public class Task2 {
                 suma = suma + vector2[i];
 
             }
-            System.out.print(suma);
+            System.out.print("sum:");
+            System.out.println(suma);
 
             for (int j = 0; j < vector2.length;j++ ){
                 if(vector2[j]>mayor){
@@ -35,10 +36,12 @@ public class Task2 {
                     menor = vector2[j];
                 }
             }
-            System.out.print(mayor);
-            System.out.print(menor);
-
-        }while(sc2.nextInt() > 0);
+            System.out.print("max:");
+            System.out.println(mayor);
+            System.out.print("min:");
+            System.out.println(menor);
+            break;
+        }while(sc2.nextInt() > 0 );
 
     }
 }

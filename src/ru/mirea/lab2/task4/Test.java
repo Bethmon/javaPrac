@@ -38,7 +38,7 @@ public class Test
                 System.out.println("Введите название компьютера:");
                 String comp = input.nextLine();
                 shop.AddPc(comp);
-                try (FileWriter writer = new FileWriter("C:\\Users\\FOMKA\\IdeaProjects\\pract2\\shop.txt", true))
+                try (FileWriter writer = new FileWriter("E:\\shop.txt", true))
                 {
                     String text = comp;
                     writer.write(text);
@@ -58,7 +58,7 @@ public class Test
                 System.out.println(shop.SearchPc(comp));
 
                 String searchWord = comp;
-                FileInputStream fis = new FileInputStream(new File("C:\\Users\\FOMKA\\IdeaProjects\\pract2\\shop.txt"));
+                FileInputStream fis = new FileInputStream(new File("E:\\shop.txt"));
                 byte[] content = new byte[fis.available()];
                 fis.read(content);
                 fis.close();
@@ -89,7 +89,7 @@ public class Test
                 System.out.println("Введите название компьютера:");
                 String comp = input.nextLine();
 
-                Path put = Paths.get("C:\\Users\\FOMKA\\IdeaProjects\\pract2\\shop.txt");
+                Path put = Paths.get("E:\\shop.txt");
                 Path temp = Files.createTempFile("shop", ".txt");
                 Stream<String> lines = Files.lines(put);
                 try (BufferedWriter writer = Files.newBufferedWriter(temp))

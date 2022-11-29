@@ -13,6 +13,7 @@ public class Task5 {
     public static int get_factorial(int f){
         int factorial_result = 1;
         for (int i = 1; i <= f; i++) {
+
             factorial_result *= i;
         }
         return factorial_result;
